@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Xaira Chemical Inventory Lookup</title>
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+  <header class="app-header">
+    <div class="header-inner">
+      <h1>Chemical Inventory Lookup</h1>
+      <p class="subtitle">Search the lab's EH&amp;S chemical inventory by name or CAS number</p>
+    </div>
+  </header>
+
+  <main class="app-main">
+    <div class="search-bar">
+      <input
+        id="search-input"
+        type="text"
+        placeholder="Search by chemical name or CAS number…"
+        autocomplete="off"
+        aria-label="Search chemicals"
+      />
+      <span id="result-count" class="result-count"></span>
+    </div>
+
+    <div class="content-area">
+      <section id="results-panel" class="results-panel" aria-label="Search results">
+        <ul id="results-list" class="results-list"></ul>
+        <p id="empty-state" class="empty-state">Start typing to search the inventory.</p>
+        <p id="no-results" class="empty-state" hidden>No chemicals match your search.</p>
+      </section>
+
+      <section id="detail-panel" class="detail-panel" aria-label="Chemical details">
+        <div id="detail-placeholder" class="detail-placeholder">
+          <p>Select a chemical from the results to view its full record.</p>
+        </div>
+        <div id="detail-content" class="detail-content" hidden></div>
+      </section>
+    </div>
+  </main>
+
+  <footer class="app-footer">
+    <p id="data-meta"></p>
+  </footer>
+
+  <script src="js/app.js"></script>
+</body>
+</html>
